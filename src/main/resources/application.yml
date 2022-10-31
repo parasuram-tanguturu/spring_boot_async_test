@@ -1,0 +1,11 @@
+spring:
+  mvc:
+    async:
+      request-timeout: 10000
+
+server:
+  port: 9090
+
+logging:
+  level:
+    root: debug
