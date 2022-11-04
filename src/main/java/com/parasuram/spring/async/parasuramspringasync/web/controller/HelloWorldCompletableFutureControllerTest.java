@@ -1,5 +1,6 @@
 package com.parasuram.spring.async.parasuramspringasync.web.controller;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ public class HelloWorldCompletableFutureControllerTest {
 
 
     @GetMapping("/tenant/{tenantId}/testCompletableFuture/")
+    @Async
     public CompletableFuture<String> echoHelloWorldWithTenant(@PathVariable String tenantId){
         return CompletableFuture.supplyAsync(
                 ()->{
